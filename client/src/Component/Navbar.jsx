@@ -15,9 +15,9 @@ const Navbar = () => {
 
 
   return (
-    <div className='shadow py-5'>
+    <div className='shadow py-4'>
         <div className=' container px-4 2xl:px-20 mx-auto flex justify-between items-center'>
-        <img src={assets.logo} alt=""/>
+        <img src={assets.logo} className='h-11 w-30' alt=""/>
         {
             user ? (
                 <div className='flex gap-5'>
