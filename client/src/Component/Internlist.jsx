@@ -10,7 +10,7 @@ const Internlist = () => {
     <div className='container 2xl:px-20 mx-auto flex flex-col lg:flex-row max:lg:space-y-8 py-8'>
         <div>
             {/* sidebar */}
-            <div className='w-full lg:w-1/4 bg-white px-4 '>
+            <div className='w-full  bg-white px-4 '>
                 {/* searchfilter from hero component */}
                 {
                     isSearched&& (searchFilter.title !== "" || searchFilter.location !== "" )&&(

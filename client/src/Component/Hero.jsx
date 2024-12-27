@@ -51,6 +51,9 @@ const Hero = () => {
             <div className='flex justify-items-center gap-10 lg:gap-16 flex-wrap'>
             <p>Trusted by</p>
             <img  className='h-6'src={assets.amazon_logoo} alt="" />
+            <img  className='h-6'src={assets.google} alt="" />
+            <img  className='h-6'src={assets.ibmlogo} alt="" />
+            <img  className='h-6'src={assets.virtusa} alt="" />
             <img className='h-6' src={assets.microsoft_logo} alt="" />
             <img  className='h-6'src={assets.walmart_logo} alt="" />
             <img className='h-6' src={assets.accenture_logo} alt="" />

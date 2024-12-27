@@ -3,6 +3,9 @@ import search_icon from "./search_icon.svg";
 import company_icon from "./company_icon.svg";
 import microsoft_logo from "./microsoft_logo.svg";
 import walmart_logo from "./walmart_logo.svg";
+import google from "./R.png";
+import ibmlogo from "./R (1).png";
+import virtusa from "./virtusa-logo.png";
 import accenture_logo from "./accenture_logo.png";
 import profile_img from "./profile_img.png";
 import app_main_img from "./app_main_img.png";
@@ -35,6 +38,9 @@ import adobe_logo from './adobe_logo.png'
 import amazon_logo from './amazon_logo.png'
 
 export const assets = {
+    google,
+    ibmlogo,
+    virtusa,
     logo,
     search_icon,
     cross_icon,
