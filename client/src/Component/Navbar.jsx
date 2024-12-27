@@ -29,7 +29,7 @@ const Navbar = () => {
             ):(
         <div className='flex gap-5 max-sm:text-xs'>
             <button className='text-gray-600'> Recrute Login</button>
-            <button onClick={ e =>openSignIn()}className='bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-full'>Login</button>
+            <button onClick={ e =>openSignIn()}className='bg-green-500 hover:bg-green-700 text-white py-2 px-6 rounded-full'>Login</button>
         </div>
          )
         }
