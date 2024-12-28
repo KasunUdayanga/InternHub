@@ -89,21 +89,21 @@ export const JobCategories = [
 ]
 
 export const JobLocations = [
-    "Bangalore",
-    "Washington",
-    "Hyderabad",
-    "Mumbai",
-    "California",
-    "Chennai",
-    "New York"
+    "Colombo",
+    "Galle",
+    "Anuradapura",
+    "Jaffna",
+    "Mathara",
+    "Gampaha",
+    "Kandy",
 ]
 
 // Sample data for Manage Jobs Page
 export const manageJobsData = [
-    { _id: 1, title: "Full Stack Developer", date: 1729102298497, location: "Bangalore", applicants: 20 },
-    { _id: 2, title: "Data Scientist", date: 1729102298497, location: "San Francisco", applicants: 15 },
-    { _id: 3, title: "Marketing Manager", date: 1729102298497, location: "London", applicants: 2 },
-    { _id: 4, title: "UI/UX Designer", date: 1729102298497, location: "Dubai", applicants: 25 }
+    { _id: 1, title: "Full Stack Developer", date: 1729102298497, location: "Colombo", applicants: 20 },
+    { _id: 2, title: "Data Scientist", date: 1729102298497, location: " Galle", applicants: 15 },
+    { _id: 3, title: "Marketing Manager", date: 1729102298497, location: "Colombo", applicants: 2 },
+    { _id: 4, title: "UI/UX Designer", date: 1729102298497, location: "Jaffna", applicants: 25 }
 ];
 
 // Sample data for Profile Page
@@ -111,7 +111,7 @@ export const jobsApplied = [
     {
         company: 'Amazon',
         title: 'Full Stack Developer',
-        location: 'Bangalore',
+        location: 'Jaffna',
         date: '22 Aug, 2024',
         status: 'Pending',
         logo: company_icon,
@@ -119,7 +119,7 @@ export const jobsApplied = [
     {
         company: 'Meta',
         title: 'Data Scientist',
-        location: 'San Francisco',
+        location: 'Galle',
         date: '22 Aug, 2024',
         status: 'Rejected',
         logo: company_icon,
@@ -127,7 +127,7 @@ export const jobsApplied = [
     {
         company: 'Google',
         title: 'Marketing Manager',
-        location: 'London',
+        location: 'Colombo',
         date: '25 Sep, 2024',
         status: 'Accepted',
         logo: company_icon,
@@ -135,7 +135,7 @@ export const jobsApplied = [
     {
         company: 'Qualcomm',
         title: 'UI/UX Designer',
-        location: 'Dubai',
+        location: 'Gampaha',
         date: '15 Oct, 2024',
         status: 'Pending',
         logo: company_icon,

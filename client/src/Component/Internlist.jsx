@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { AppContext } from '../context/AppContext'
-import { assets } from '../assets/assets'
+import { assets, JobCategories, JobLocations } from '../assets/assets'
 
 const Internlist = () => {
     const {isSearched, searchFilter,setSearchFilter}=useContext(AppContext)   
@@ -8,7 +8,7 @@ const Internlist = () => {
 
   return (
     <div className='container 2xl:px-20 mx-auto flex flex-col lg:flex-row max:lg:space-y-8 py-8'>
-        <div>
+        
             {/* sidebar */}
             <div className='w-full  bg-white px-4 '>
                 {/* searchfilter from hero component */}
@@ -33,8 +33,42 @@ const Internlist = () => {
                         </>
                     )
                 }
+
+                {/* category */}
+                <div className='max-lg:hidden'>
+                    <h4 className='font-medium text-lg py-4'>Search by Category</h4>
+                    <ul className='space-y-4 text-gray-600'>
+                       { JobCategories.map((category,index)=>(
+                        <li className='flex gap-3 items-center' key={index}>
+                            <input className='scale-125' type="checkbox"  />
+                            { category}
+                        </li>
+                       ))}
+                    </ul>
+                </div>
+                {/* location */}
+                <div className='max-lg:hidden'>
+                    <h4 className='font-medium text-lg py-4 pt-4'>Search by Location</h4>
+                    <ul className='space-y-4 text-gray-600'>
+                       { JobLocations.map((location,index)=>(
+                        <li className='flex gap-3 items-center' key={index}>
+                            <input className='scale-125' type="checkbox"  />
+                            { location}
+                        </li>
+                       ))}
+                    </ul>
+                </div>
             </div>
-        </div>
+                       {/* Internlising */}
+                       <section className='w-400px lg:left-3/4 text-gray-800  max-lg:px-'>
+                       <h3 className='font-medium text-3xl py-3' id='intern-list'>Latest Interns</h3>
+                       <p className='mb-8'>Get best intern opportunity from tom companies </p>
+                       <div className='grid grid-clos-1 sm:grid-cols-2 xl:grid-cols-3 gap-4'>
+
+                       </div>
+                       </section>
+
+        
     </div>
   )
 }
