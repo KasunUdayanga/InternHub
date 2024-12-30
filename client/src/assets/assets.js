@@ -160,7 +160,7 @@ export const viewApplicationsPageData = [
     { _id: 7, name: "Richard Sanford", jobTitle: "Marketing Manager", location: "Chennai", imgSrc: profile_img },
 ];
 
-export const jobsData = [
+export const internCard = [
     {
         _id: '1',
         title: "Full Stack Developer",

@@ -48,8 +48,8 @@ const Hero = () => {
             </div>
         </div>
         <div className='border boder-gray-300 shadow-md mx-2 mt-5 p-6 rounded-md flex'>
-            <div className='flex justify-items-center gap-10 lg:gap-16 flex-wrap'>
-            <p>Trusted by</p>
+            <div className='flex justify-items-center gap-10 lg:gap-13 flex-wrap'>
+            <p className='font-medium mx-2'>Trusted by</p>
             <img  className='h-6'src={assets.amazon_logoo} alt="" />
             <img  className='h-6'src={assets.google} alt="" />
             <img  className='h-6'src={assets.ibmlogo} alt="" />
