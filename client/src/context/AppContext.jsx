@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import { createContext, useState } from "react";
+import { internCard } from "../assets/assets";
 
 export const AppContext =createContext();
 
@@ -9,12 +11,21 @@ export const AppContextProvider=(props)=>{
         location:''
     })
     const [isSearched,setIsSearched]=useState(false)
+    const [jobs, setJobs]=useState([])
+
+    const fetchJobs =async()=>{
+        setJobs(internCard); 
+    }
+    useEffect(()=>{
+        fetchJobs()
+    },[]);
 
     const value={
         searchFilter,
         setSearchFilter,
         isSearched,
-        setIsSearched
+        setIsSearched,
+        jobs,setJobs
     }
 
 
