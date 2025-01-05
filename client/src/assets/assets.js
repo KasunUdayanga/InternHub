@@ -96,6 +96,7 @@ export const JobLocations = [
     "Mathara",
     "Gampaha",
     "Kandy",
+    "Polonnaruwa"
 ]
 
 // Sample data for Manage Jobs Page
@@ -143,7 +144,7 @@ export const jobsApplied = [
     {
         company: 'Microsoft',
         title: 'Full Stack Developer',
-        location: 'Hyderabad',
+        location: 'Polonnaruwa',
         date: '25 Sep, 2024',
         status: 'Accepted',
         logo: company_icon,
@@ -151,25 +152,28 @@ export const jobsApplied = [
 ];
 
 export const viewApplicationsPageData = [
-    { _id: 1, name: "Richard Sanford", jobTitle: "Full Stack Developer", location: "Bangalore", imgSrc: profile_img },
-    { _id: 2, name: "Enrique Murphy", jobTitle: "Data Scientist", location: "San Francisco", imgSrc: profile_img },
-    { _id: 3, name: "Alison Powell", jobTitle: "Marketing Manager", location: "London", imgSrc: profile_img },
-    { _id: 4, name: "Richard Sanford", jobTitle: "UI/UX Designer", location: "Dubai", imgSrc: profile_img },
-    { _id: 5, name: "Enrique Murphy", jobTitle: "Full Stack Developer", location: "Hyderabad", imgSrc: profile_img },
-    { _id: 6, name: "Alison Powell", jobTitle: "Data Scientist", location: "New Delhi", imgSrc: profile_img },
-    { _id: 7, name: "Richard Sanford", jobTitle: "Marketing Manager", location: "Chennai", imgSrc: profile_img },
+    { _id: 1, name: "Sanjeewa Perera", jobTitle: "Full Stack Developer", location: "Colombo", imgSrc: profile_img },
+    { _id: 2, name: "Nadeesha Hettiarachchi", jobTitle: "Data Scientist", location: "Galle", imgSrc: profile_img },
+    { _id: 3, name: "Malina Wickramarathna", jobTitle: "Marketing Manager", location: "Anuradhapura", imgSrc: profile_img },
+    { _id: 4, name: "Sanjeewa Perera", jobTitle: "UI/UX Designer", location: "Jaffna", imgSrc: profile_img },
+    { _id: 5, name: "Nadeesha Hettiarachchi", jobTitle: "Full Stack Developer", location: "Matara", imgSrc: profile_img },
+    { _id: 6, name: "Malina Wickramarathna", jobTitle: "Data Scientist", location: "Gampaha", imgSrc: profile_img },
+    { _id: 7, name: "Sanjeewa Perera", jobTitle: "Marketing Manager", location: "Kandy", imgSrc: profile_img },
+    { _id: 8, name: "Kusum Perera", jobTitle: "Data Scientist", location: "Polonnaruwa", imgSrc: profile_img },  
 ];
+
+
 
 export const internCard = [
     {
         _id: '1',
         title: "Full Stack Developer",
-        location: "California",
+        location: "Colombo",
         level: "Senior Level",
         companyId: {
             "_id": "670e4d25ca9fda8f1bf359b9",
             "name": "Slack",
-            "email": "slack@demo.com",
+            "email": "KIU@Div.com",
             "image": company_icon,
         },
         description: `
@@ -197,16 +201,16 @@ export const internCard = [
     {
         _id: '2',
         title: "Data Scientist",
-        location: "New York",
+        location: "Galle",
         level: "Intermediate Level",
         companyId: {
             "_id": "670e4d25ca9fda8f1bf359b9",
             "name": "Slack",
-            "email": "slack@demo.com",
+            "email": "KIU@Div.com",
             "image": company_icon,
         },
         description: `
-        <p>Join our analytics team to help drive business decisions using data. As a Data Scientist, you will leverage your analytical skills to uncover patterns and insights that will influence our strategic direction. You will work closely with stakeholders to understand their needs and deliver impactful analyses that support our growth objectives. Your role is critical in turning data into actionable insights.</p>
+        <p>Join our analytics team to help drive business decisions using data. As a Data Scientist, you will leverage your analytical skills to uncover patterns and insights that will influence our strategic direction. You will work closely with stakeholders to understand their needs and deliver impactful analyses that support our growth objectives.</p>
         <h2><strong>Key Responsibilities</strong></h2>
         <ol>
             <li>Analyze large datasets to uncover trends and patterns that inform business strategies.</li>
@@ -230,12 +234,12 @@ export const internCard = [
     {
         _id: '3',
         title: "UI/UX Designer",
-        location: "Bangalore",
+        location: "Anuradapura",
         level: "Beginner Level",
         companyId: {
             "_id": "670e4d25ca9fda8f1bf359b9",
             "name": "Slack",
-            "email": "slack@demo.com",
+            "email": "KIU@Div.com",
             "image": company_icon,
         },
         description: `
@@ -262,662 +266,533 @@ export const internCard = [
     },
     {
         _id: '4',
-        title: "DevOps Engineer",
-        location: "Washington",
-        level: "Senior Level",
-        companyId: {
-            "_id": "670e4d25ca9fda8f1bf359b9",
-            "name": "Slack",
-            "email": "slack@demo.com",
-            "image": company_icon,
-        },
-        description: `
-        <p>Enhance our deployment pipeline as a DevOps Engineer. This role will involve automating deployment processes, managing cloud infrastructure, and implementing best practices for security and performance. You will play a vital role in bridging the gap between development and operations, ensuring efficient workflows and high-quality releases.</p>
-        <h2><strong>Key Responsibilities</strong></h2>
-        <ol>
-            <li>Automate deployment processes using CI/CD tools to streamline development workflows.</li>
-            <li>Manage cloud infrastructure, ensuring optimal performance and scalability.</li>
-            <li>Implement security best practices to safeguard our systems.</li>
-            <li>Monitor application performance and troubleshoot issues proactively.</li>
-            <li>Collaborate with developers to improve system reliability and efficiency.</li>
-        </ol>
-        <h2><strong>Skills Required</strong></h2>
-        <ol>
-            <li>Experience with CI/CD tools (e.g., Jenkins, GitLab CI).</li>
-            <li>Strong knowledge of cloud platforms (e.g., AWS, Azure).</li>
-            <li>Proficiency in scripting languages (e.g., Bash, Python).</li>
-            <li>Familiarity with containerization technologies (e.g., Docker, Kubernetes).</li>
-            <li>Excellent troubleshooting and analytical skills.</li>
-        </ol>`,
-        salary: 53000,
-        date: 1729681667114,
-        category: "Programming",
-    },
-    {
-        _id: '5',
-        title: "Software Engineer",
-        location: "Hyderabad",
-        level: "Intermediate Level",
-        companyId: {
-            "_id": "670e4d25ca9fda8f1bf359b9",
-            "name": "Slack",
-            "email": "slack@demo.com",
-            "image": company_icon,
-        },
-        description: `
-        <p>Join our team as a Software Engineer to build high-quality applications that deliver exceptional user experiences. You will be responsible for designing, developing, and maintaining software solutions that meet business needs. Collaborating closely with other engineers, you will contribute to code reviews and ensure best practices are followed throughout the development process.</p>
-        <h2><strong>Key Responsibilities</strong></h2>
-        <ol>
-            <li>Develop and maintain software applications that fulfill user requirements.</li>
-            <li>Collaborate with cross-functional teams to design scalable and efficient solutions.</li>
-            <li>Participate in code reviews to ensure code quality and maintainability.</li>
-            <li>Conduct testing and debugging to improve application functionality.</li>
-            <li>Document development processes and application designs.</li>
-        </ol>
-        <h2><strong>Skills Required</strong></h2>
-        <ol>
-            <li>Proficient in Java or C# with a solid understanding of object-oriented programming.</li>
-            <li>Experience with Agile methodologies and software development life cycle.</li>
-            <li>Strong problem-solving skills and attention to detail.</li>
-            <li>Familiarity with version control systems (e.g., Git).</li>
-            <li>Excellent communication and teamwork abilities.</li>
-        </ol>`,
-        salary: 91000,
-        date: 1729681667114,
-        category: "Programming",
-    },
-    {
-        _id: '6',
         title: "Network Engineer",
-        location: "Bangalore",
+        location: "Jaffna",
         level: "Senior Level",
         companyId: {
             "_id": "670e4d25ca9fda8f1bf359b9",
             "name": "Slack",
-            "email": "slack@demo.com",
+            "email": "KIU@Div.com",
             "image": company_icon,
         },
         description: `
-        <p>We are looking for a Network Engineer to manage our infrastructure and ensure robust connectivity across all systems. Your expertise will help us design and implement network solutions that are secure and efficient. You will be pivotal in monitoring network performance and ensuring compliance with security standards.</p>
+        <p>We are looking for a skilled Network Engineer to design, implement, and maintain efficient network infrastructures. You will ensure the secure and smooth operation of communication networks and provide technical support to end-users and teams.</p>
         <h2><strong>Key Responsibilities</strong></h2>
         <ol>
-            <li>Design and implement network solutions that meet organizational needs.</li>
-            <li>Monitor network performance and troubleshoot issues to ensure uptime.</li>
-            <li>Ensure security compliance by implementing best practices.</li>
-            <li>Document network configurations and maintain updated records.</li>
-            <li>Collaborate with IT teams to enhance network capabilities.</li>
+            <li>Design and deploy networks that meet organizational requirements.</li>
+            <li>Monitor and troubleshoot network performance to minimize downtime.</li>
+            <li>Implement security measures to protect sensitive data.</li>
+            <li>Document network configurations and processes.</li>
+            <li>Stay updated on emerging networking technologies.</li>
         </ol>
         <h2><strong>Skills Required</strong></h2>
         <ol>
-            <li>Proficiency in network protocols and routing (e.g., TCP/IP, BGP, OSPF).</li>
-            <li>Experience with firewalls, VPNs, and security technologies.</li>
-            <li>Strong troubleshooting skills and attention to detail.</li>
-            <li>Excellent communication and teamwork abilities.</li>
-            <li>Relevant certifications (e.g., CCNA, CCNP) are a plus.</li>
+            <li>Proficiency in networking protocols (e.g., TCP/IP, BGP, OSPF).</li>
+            <li>Hands-on experience with firewalls, routers, and switches.</li>
+            <li>Strong knowledge of network monitoring tools.</li>
+            <li>Excellent problem-solving and multitasking skills.</li>
+            <li>Familiarity with cloud networking solutions is a plus.</li>
         </ol>`,
-        salary: 77000,
+        salary: 85000,
         date: 1729681667114,
         category: "Networking",
     },
     {
-        _id: '7',
-        title: "Project Manager",
-        location: "Bangalore",
+        _id: '5',
+        title: "Marketing Specialist",
+        location: "Mathara",
+        level: "Intermediate Level",
+        companyId: {
+            "_id": "670e4d25ca9fda8f1bf359b9",
+            "name": "Slack",
+            "email": "KIU@Div.com",
+            "image": company_icon,
+        },
+        description: `
+        <p>We are seeking a talented Marketing Specialist to drive our campaigns and boost brand awareness. You will work with cross-functional teams to create compelling marketing strategies that engage our target audience and generate measurable results.</p>
+        <h2><strong>Key Responsibilities</strong></h2>
+        <ol>
+            <li>Develop and execute marketing campaigns across multiple channels.</li>
+            <li>Analyze campaign performance to optimize strategies.</li>
+            <li>Collaborate with content creators to produce engaging materials.</li>
+            <li>Conduct market research to identify trends and opportunities.</li>
+            <li>Manage social media accounts and track engagement metrics.</li>
+        </ol>
+        <h2><strong>Skills Required</strong></h2>
+        <ol>
+            <li>Proficiency in digital marketing tools and platforms.</li>
+            <li>Strong communication and writing skills.</li>
+            <li>Experience with SEO and SEM strategies.</li>
+            <li>Ability to analyze data and generate actionable insights.</li>
+            <li>Creativity and adaptability in a fast-paced environment.</li>
+        </ol>`,
+        salary: 65000,
+        date: 1729681667114,
+        category: "Marketing",
+    },
+    {
+        _id: '6',
+        title: "Cybersecurity Analyst",
+        location: "Gampaha",
         level: "Senior Level",
         companyId: {
             "_id": "670e4d25ca9fda8f1bf359b9",
             "name": "Slack",
-            "email": "slack@demo.com",
+            "email": "KIU@Div.com",
             "image": company_icon,
         },
         description: `
-        <p>Lead projects as a Project Manager ensuring timely delivery and alignment with organizational goals. You will oversee project planning, execution, and monitoring, collaborating with various teams to ensure that all aspects of each project are delivered successfully. Your strong leadership skills will be key to motivating team members and fostering a positive work environment.</p>
+        <p>Protect our digital assets as a Cybersecurity Analyst. Your role will involve identifying vulnerabilities, monitoring threats, and implementing robust security protocols to ensure the safety of our systems and data.</p>
         <h2><strong>Key Responsibilities</strong></h2>
         <ol>
-            <li>Define project scope, objectives, and deliverables in collaboration with stakeholders.</li>
-            <li>Develop detailed project plans and schedules to guide execution.</li>
-            <li>Monitor project progress and adjust plans as necessary to meet deadlines.</li>
-            <li>Facilitate communication between teams and manage stakeholder expectations.</li>
-            <li>Conduct project retrospectives to identify lessons learned and areas for improvement.</li>
+            <li>Monitor systems for potential security breaches.</li>
+            <li>Conduct risk assessments and penetration testing.</li>
+            <li>Develop and enforce security policies and protocols.</li>
+            <li>Respond to and mitigate security incidents.</li>
+            <li>Train employees on cybersecurity best practices.</li>
         </ol>
         <h2><strong>Skills Required</strong></h2>
         <ol>
-            <li>Proven experience as a Project Manager in a technology-focused environment.</li>
-            <li>Familiarity with project management software (e.g., JIRA, Trello).</li>
-            <li>Strong leadership and organizational skills.</li>
-            <li>Excellent communication and interpersonal abilities.</li>
-            <li>Certification in project management (e.g., PMP, Scrum Master) is preferred.</li>
+            <li>In-depth knowledge of network and system security.</li>
+            <li>Familiarity with security tools like firewalls and antivirus software.</li>
+            <li>Experience with incident response and threat detection.</li>
+            <li>Strong problem-solving and analytical skills.</li>
+            <li>Certifications like CISSP or CISM are a plus.</li>
         </ol>`,
-        salary: 60000,
+        salary: 92000,
+        date: 1729681667114,
+        category: "Cybersecurity",
+    },
+    {
+        _id: '7',
+        title: "Project Manager",
+        location: "Kandy",
+        level: "Intermediate Level",
+        companyId: {
+            "_id": "670e4d25ca9fda8f1bf359b9",
+            "name": "Slack",
+            "email": "KIU@Div.com",
+            "image": company_icon,
+        },
+        description: `
+        <p>We are looking for an experienced Project Manager to oversee projects from inception to completion. In this role, you will coordinate with teams, manage resources, and ensure that projects meet quality standards and deadlines.</p>
+        <h2><strong>Key Responsibilities</strong></h2>
+        <ol>
+            <li>Define project scope, objectives, and deliverables.</li>
+            <li>Manage project schedules, budgets, and resources.</li>
+            <li>Communicate effectively with stakeholders to ensure alignment.</li>
+            <li>Monitor project progress and resolve any issues.</li>
+            <li>Ensure project documentation is maintained and up-to-date.</li>
+        </ol>
+        <h2><strong>Skills Required</strong></h2>
+        <ol>
+            <li>Strong leadership and organizational skills.</li>
+            <li>Experience with project management tools like Jira or Trello.</li>
+            <li>Excellent problem-solving and conflict-resolution skills.</li>
+            <li>Ability to manage multiple projects simultaneously.</li>
+            <li>PMP certification is a plus.</li>
+        </ol>`,
+        salary: 80000,
         date: 1729681667114,
         category: "Management",
     },
     {
         _id: '8',
-        title: "Mobile App Developer",
-        location: "Hyderabad",
-        level: "Intermediate Level",
-        companyId: {
-            "_id": "670e4d25ca9fda8f1bf359b9",
-            "name": "Slack",
-            "email": "slack@demo.com",
-            "image": company_icon,
-        },
-        description: `
-        <p>Join our team as a Mobile App Developer to create engaging mobile applications for iOS and Android platforms. You will be responsible for the full app development lifecycle, from concept and design to deployment and maintenance. Your creativity and technical skills will help us deliver high-quality applications that enhance user experience.</p>
-        <h2><strong>Key Responsibilities</strong></h2>
-        <ol>
-            <li>Design and build advanced mobile applications for iOS and Android.</li>
-            <li>Collaborate with cross-functional teams to define, design, and ship new features.</li>
-            <li>Continuously discover, evaluate, and implement new technologies to maximize development efficiency.</li>
-            <li>Ensure performance, quality, and responsiveness of applications.</li>
-            <li>Conduct code reviews and maintain code quality standards.</li>
-        </ol>
-        <h2><strong>Skills Required</strong></h2>
-        <ol>
-            <li>Proficiency in Swift for iOS or Kotlin for Android development.</li>
-            <li>Experience with RESTful APIs and third-party libraries.</li>
-            <li>Strong understanding of mobile app design principles and guidelines.</li>
-            <li>Excellent problem-solving skills and attention to detail.</li>
-            <li>Familiarity with version control systems (e.g., Git).</li>
-        </ol>`,
-        salary: 112000,
-        date: 1729681667114,
-        category: "Programming",
-    },
-    {
-        _id: '9',
-        title: "Cloud Architect",
-        location: "Hyderabad",
+        title: "Cloud Engineer",
+        location: "Colombo",
         level: "Senior Level",
         companyId: {
             "_id": "670e4d25ca9fda8f1bf359b9",
             "name": "Slack",
-            "email": "slack@demo.com",
+            "email": "KIU@Div.com",
             "image": company_icon,
         },
         description: `
-        <p>Design cloud solutions as a Cloud Architect, helping to transform our infrastructure and services. You will work closely with various teams to understand their requirements and translate them into secure, scalable, and efficient cloud-based solutions. Your expertise will guide our cloud strategy and ensure that we leverage cloud technologies to their fullest potential.</p>
+        <p>Join our tech team as a Cloud Engineer to design, deploy, and maintain cloud-based solutions. You will work with modern cloud platforms to ensure our infrastructure is scalable, secure, and efficient.</p>
         <h2><strong>Key Responsibilities</strong></h2>
         <ol>
-            <li>Design and implement cloud solutions that align with business objectives.</li>
-            <li>Provide guidance on best practices for cloud architecture and deployment.</li>
-            <li>Collaborate with DevOps teams to enhance cloud infrastructure and security.</li>
-            <li>Monitor cloud systems for performance and cost-effectiveness.</li>
-            <li>Stay updated on emerging cloud technologies and industry trends.</li>
+            <li>Design and implement cloud architectures that support business needs.</li>
+            <li>Manage cloud infrastructure and optimize for performance and cost.</li>
+            <li>Ensure high availability and disaster recovery capabilities.</li>
+            <li>Monitor and troubleshoot cloud-based applications and services.</li>
+            <li>Stay updated on emerging cloud technologies and best practices.</li>
         </ol>
         <h2><strong>Skills Required</strong></h2>
         <ol>
-            <li>Strong knowledge of cloud service providers (e.g., AWS, Azure, GCP).</li>
-            <li>Experience with cloud architecture patterns and best practices.</li>
-            <li>Familiarity with containerization and orchestration technologies (e.g., Docker, Kubernetes).</li>
-            <li>Excellent analytical and problem-solving skills.</li>
-            <li>Relevant certifications (e.g., AWS Certified Solutions Architect) are preferred.</li>
+            <li>Proficiency with AWS, Azure, or Google Cloud.</li>
+            <li>Strong scripting skills (e.g., Python, Bash).</li>
+            <li>Knowledge of containerization and orchestration tools (e.g., Docker, Kubernetes).</li>
+            <li>Experience with infrastructure as code (e.g., Terraform).</li>
+            <li>Excellent problem-solving and communication skills.</li>
+        </ol>`,
+        salary: 98000,
+        date: 1729681667114,
+        category: "Networking",
+    },
+    {
+        _id: '9',
+        title: "Content Creator",
+        location: "Anuradapura",
+        level: "Beginner Level",
+        companyId: {
+            "_id": "670e4d25ca9fda8f1bf359b9",
+            "name": "Slack",
+            "email": "KIU@Div.com",
+            "image": company_icon,
+        },
+        description: `
+        <p>We are looking for a creative Content Creator to develop engaging materials for our brand. Your role will involve producing blogs, videos, and social media posts that resonate with our audience and drive engagement.</p>
+        <h2><strong>Key Responsibilities</strong></h2>
+        <ol>
+            <li>Develop creative content for digital platforms.</li>
+            <li>Collaborate with marketing teams to align content with campaigns.</li>
+            <li>Analyze audience engagement metrics and refine strategies.</li>
+            <li>Stay updated with content trends and implement innovative ideas.</li>
+            <li>Manage a content calendar to ensure timely delivery.</li>
+        </ol>
+        <h2><strong>Skills Required</strong></h2>
+        <ol>
+            <li>Proficiency in content creation tools and software.</li>
+            <li>Strong writing and storytelling skills.</li>
+            <li>Knowledge of social media trends and best practices.</li>
+            <li>Creative mindset and attention to detail.</li>
+            <li>Ability to multitask and meet deadlines.</li>
+        </ol>`,
+        salary: 45000,
+        date: 1729681667114,
+        category: "Marketing",
+    },
+    {
+        _id: '10',
+        title: "Data Analyst",
+        location: "Jaffna",
+        level: "Intermediate Level",
+        companyId: {
+            "_id": "670e4d25ca9fda8f1bf359b9",
+            "name": "Slack",
+            "email": "KIU@Div.com",
+            "image": company_icon,
+        },
+        description: `
+        <p>We are looking for a Data Analyst to join our team and transform raw data into actionable insights. You will work closely with stakeholders to provide reports and data-driven recommendations that improve business performance.</p>
+        <h2><strong>Key Responsibilities</strong></h2>
+        <ol>
+            <li>Analyze large datasets to identify trends and patterns.</li>
+            <li>Create data visualizations to present findings clearly.</li>
+            <li>Work with cross-functional teams to define analytics needs.</li>
+            <li>Develop and maintain dashboards and reporting tools.</li>
+            <li>Ensure data quality and integrity.</li>
+        </ol>
+        <h2><strong>Skills Required</strong></h2>
+        <ol>
+            <li>Proficiency in SQL and data visualization tools (e.g., Tableau, Power BI).</li>
+            <li>Strong analytical and problem-solving skills.</li>
+            <li>Experience with statistical tools like R or Python.</li>
+            <li>Knowledge of data warehousing and ETL processes.</li>
+            <li>Attention to detail and ability to work with complex data.</li>
+        </ol>`,
+        salary: 75000,
+        date: 1729681667114,
+        category: "Data Science",
+    },
+    {
+        _id: '11',
+        title: "UX Designer",
+        location: "Colombo",
+        level: "Senior Level",
+        companyId: {
+            "_id": "670e4d25ca9fda8f1bf359b9",
+            "name": "Slack",
+            "email": "KIU@Div.com",
+            "image": company_icon,
+        },
+        description: `
+        <p>As a UX Designer, you will craft exceptional user experiences that align with our product goals. You will collaborate with teams to create intuitive interfaces and improve usability across all platforms.</p>
+        <h2><strong>Key Responsibilities</strong></h2>
+        <ol>
+            <li>Design wireframes, prototypes, and user flows.</li>
+            <li>Conduct user research and usability testing.</li>
+            <li>Collaborate with developers to implement designs.</li>
+            <li>Ensure designs meet accessibility standards.</li>
+            <li>Stay updated with design trends and best practices.</li>
+        </ol>
+        <h2><strong>Skills Required</strong></h2>
+        <ol>
+            <li>Proficiency in design tools like Figma, Adobe XD, or Sketch.</li>
+            <li>Strong portfolio showcasing user-centered designs.</li>
+            <li>Understanding of responsive and mobile-first design principles.</li>
+            <li>Excellent communication and collaboration skills.</li>
+            <li>Attention to detail and creativity.</li>
+        </ol>`,
+        salary: 89000,
+        date: 1729681667114,
+        category: "Designing",
+    },
+    {
+        _id: '12',
+        title: "Network Administrator",
+        location: "Kandy",
+        level: "Intermediate Level",
+        companyId: {
+            "_id": "670e4d25ca9fda8f1bf359b9",
+            "name": "Slack",
+            "email": "KIU@Div.com",
+            "image": company_icon,
+        },
+        description: `
+        <p>We are hiring a Network Administrator to maintain and enhance our network infrastructure. You will ensure system availability, security, and efficiency, playing a key role in our IT operations.</p>
+        <h2><strong>Key Responsibilities</strong></h2>
+        <ol>
+            <li>Configure and maintain network devices and systems.</li>
+            <li>Monitor network performance and troubleshoot issues.</li>
+            <li>Implement security measures to protect data and systems.</li>
+            <li>Coordinate with vendors for hardware and software support.</li>
+            <li>Create and update network documentation.</li>
+        </ol>
+        <h2><strong>Skills Required</strong></h2>
+        <ol>
+            <li>Proficiency in network protocols and troubleshooting tools.</li>
+            <li>Experience with firewalls, routers, and switches.</li>
+            <li>Knowledge of network security practices.</li>
+            <li>Strong problem-solving and organizational skills.</li>
+            <li>Certifications like CCNA or CompTIA Network+ are a plus.</li>
+        </ol>`,
+        salary: 72000,
+        date: 1729681667114,
+        category: "Networking",
+    },
+    {
+        _id: '13',
+        title: "SEO Specialist",
+        location: "Galle",
+        level: "Intermediate Level",
+        companyId: {
+            "_id": "670e4d25ca9fda8f1bf359b9",
+            "name": "Slack",
+            "email": "KIU@Div.com",
+            "image": company_icon,
+        },
+        description: `
+        <p>We are looking for an SEO Specialist to increase our online visibility and drive traffic to our website. You will optimize web pages, conduct keyword research, and monitor performance metrics to achieve our marketing goals.</p>
+        <h2><strong>Key Responsibilities</strong></h2>
+        <ol>
+            <li>Perform keyword research to identify target phrases.</li>
+            <li>Optimize website content and metadata for search engines.</li>
+            <li>Monitor and analyze SEO performance metrics.</li>
+            <li>Collaborate with content creators for on-page SEO.</li>
+            <li>Stay updated with changes in search engine algorithms.</li>
+        </ol>
+        <h2><strong>Skills Required</strong></h2>
+        <ol>
+            <li>Proficiency in SEO tools like Google Analytics, SEMrush, or Ahrefs.</li>
+            <li>Strong analytical skills and attention to detail.</li>
+            <li>Understanding of on-page and off-page SEO techniques.</li>
+            <li>Experience with content management systems like WordPress.</li>
+            <li>Ability to adapt to changing SEO trends and algorithms.</li>
+        </ol>`,
+        salary: 60000,
+        date: 1729681667114,
+        category: "Marketing",
+    },
+    {
+        _id: '14',
+        title: "Mobile App Developer",
+        location: "Anuradapura",
+        level: "Senior Level",
+        companyId: {
+            "_id": "670e4d25ca9fda8f1bf359b9",
+            "name": "Slack",
+            "email": "KIU@Div.com",
+            "image": company_icon,
+        },
+        description: `
+        <p>We are hiring a Mobile App Developer to create high-quality applications for Android and iOS platforms. You will collaborate with designers and back-end developers to deliver seamless user experiences.</p>
+        <h2><strong>Key Responsibilities</strong></h2>
+        <ol>
+            <li>Design, build, and maintain mobile applications.</li>
+            <li>Collaborate with teams to define app features.</li>
+            <li>Ensure applications meet performance and quality standards.</li>
+            <li>Write clean, maintainable, and reusable code.</li>
+            <li>Stay updated with mobile development trends and tools.</li>
+        </ol>
+        <h2><strong>Skills Required</strong></h2>
+        <ol>
+            <li>Proficiency in programming languages like Swift, Kotlin, or React Native.</li>
+            <li>Experience with mobile app design principles and APIs.</li>
+            <li>Strong problem-solving and debugging skills.</li>
+            <li>Knowledge of app deployment on App Store and Google Play.</li>
+            <li>Excellent teamwork and communication skills.</li>
         </ol>`,
         salary: 96000,
         date: 1729681667114,
         category: "Programming",
     },
     {
-        _id: '10',
-        title: "Technical Writer",
-        location: "Mumbai",
+        _id: '15',
+        title: "DevOps Engineer",
+        location: "Gampaha",
         level: "Intermediate Level",
         companyId: {
             "_id": "670e4d25ca9fda8f1bf359b9",
             "name": "Slack",
-            "email": "slack@demo.com",
+            "email": "KIU@Div.com",
             "image": company_icon,
         },
         description: `
-        <p>Join us as a Technical Writer to create user-friendly documentation that supports our products and services. You will work closely with engineers and product managers to gather information and produce clear, concise, and accurate documentation. Your role is essential in ensuring that our users can easily understand and utilize our offerings.</p>
+        <p>We are seeking a DevOps Engineer to enhance our development processes and manage infrastructure efficiently. Join our team to implement CI/CD pipelines and ensure smooth deployment of applications.</p>
         <h2><strong>Key Responsibilities</strong></h2>
         <ol>
-            <li>Create and maintain user manuals, API documentation, and other technical materials.</li>
-            <li>Collaborate with development teams to gather and clarify technical information.</li>
-            <li>Conduct reviews of existing documentation to ensure accuracy and relevance.</li>
-            <li>Ensure that documentation is up-to-date and consistent with product updates.</li>
-            <li>Utilize feedback from users to enhance the clarity and usability of documentation.</li>
+            <li>Develop and maintain CI/CD pipelines.</li>
+            <li>Automate infrastructure provisioning and configuration.</li>
+            <li>Monitor system performance and troubleshoot issues.</li>
+            <li>Collaborate with developers to optimize deployment processes.</li>
+            <li>Ensure system reliability and scalability.</li>
         </ol>
         <h2><strong>Skills Required</strong></h2>
         <ol>
-            <li>Proficiency in technical writing and documentation tools (e.g., MadCap Flare, Adobe FrameMaker).</li>
-            <li>Strong understanding of technology and the ability to convey complex information clearly.</li>
-            <li>Excellent research and analytical skills.</li>
-            <li>Strong communication and collaboration abilities.</li>
-            <li>Attention to detail and a commitment to quality.</li>
+            <li>Proficiency in cloud platforms like AWS, Azure, or GCP.</li>
+            <li>Experience with containerization tools like Docker and Kubernetes.</li>
+            <li>Strong scripting skills (e.g., Python, Bash).</li>
+            <li>Knowledge of configuration management tools (e.g., Ansible, Puppet).</li>
+            <li>Excellent problem-solving and communication skills.</li>
         </ol>`,
-        salary: 72000,
+        salary: 92000,
         date: 1729681667114,
-        category: "Marketing",
+        category: "Networking",
     },
     {
-        _id: '11',
-        title: "Cybersecurity Analyst",
-        location: "Mumbai",
-        level: "Intermediate Level",
-        companyId: {
-            "_id": "670e4d25ca9fda8f1bf359b9",
-            "name": "Slack",
-            "email": "slack@demo.com",
-            "image": company_icon,
-        },
-        description: `
-        <p>Protect our systems as a Cybersecurity Analyst. In this role, you will monitor security systems, analyze potential threats, and implement protective measures to safeguard our information and assets. Your expertise will help us stay ahead of evolving security challenges and maintain a secure environment for our users and stakeholders.</p>
-        <h2><strong>Key Responsibilities</strong></h2>
-        <ol>
-            <li>Monitor and analyze security events to identify potential threats.</li>
-            <li>Conduct risk assessments and vulnerability analyses to enhance security posture.</li>
-            <li>Implement security measures and controls to mitigate risks.</li>
-            <li>Collaborate with IT teams to respond to security incidents.</li>
-            <li>Stay informed about the latest cybersecurity trends and threats.</li>
-        </ol>
-        <h2><strong>Skills Required</strong></h2>
-        <ol>
-            <li>Strong knowledge of security protocols, standards, and tools.</li>
-            <li>Experience with SIEM tools and incident response processes.</li>
-            <li>Understanding of network protocols and security technologies.</li>
-            <li>Excellent problem-solving and analytical skills.</li>
-            <li>Relevant certifications (e.g., CISSP, CEH) are a plus.</li>
-        </ol>`,
-        salary: 62000,
-        date: 1729681667114,
-        category: "Cybersecurity",
-    },
-    {
-        _id: '12',
-        title: "Business Analyst",
-        location: "Mumbai",
-        level: "Intermediate Level",
-        companyId: {
-            "_id": "670e4d25ca9fda8f1bf359b9",
-            "name": "Slack",
-            "email": "slack@demo.com",
-            "image": company_icon,
-        },
-        description: `
-        <p>Join us as a Business Analyst to optimize our processes and improve overall efficiency. You will work closely with stakeholders to identify business needs and gather requirements for new projects. Your analytical skills will help drive decision-making and ensure that solutions align with business objectives.</p>
-        <h2><strong>Key Responsibilities</strong></h2>
-        <ol>
-            <li>Gather and analyze business requirements from stakeholders.</li>
-            <li>Develop detailed documentation of business processes and workflows.</li>
-            <li>Collaborate with IT and development teams to translate requirements into solutions.</li>
-            <li>Conduct testing and validation of new systems and processes.</li>
-            <li>Provide ongoing support and training for users.</li>
-        </ol>
-        <h2><strong>Skills Required</strong></h2>
-        <ol>
-            <li>Strong analytical skills and attention to detail.</li>
-            <li>Proficiency in business analysis tools (e.g., Visio, JIRA).</li>
-            <li>Excellent communication and interpersonal abilities.</li>
-            <li>Experience with data analysis and reporting.</li>
-            <li>Familiarity with Agile methodologies is a plus.</li>
-        </ol>`,
-        salary: 68000,
-        date: 1729681667114,
-        category: "Management",
-    },
-    {
-        _id: '13',
-        title: "Marketing Specialist",
-        location: "Chennai",
-        level: "Beginner Level",
-        companyId: {
-            "_id": "670e4d25ca9fda8f1bf359b9",
-            "name": "Slack",
-            "email": "slack@demo.com",
-            "image": company_icon,
-        },
-        description: `
-        <p>Support our marketing efforts as a Marketing Specialist. In this role, you will assist with campaign execution, content creation, and social media management. Your creativity and enthusiasm will help promote our brand and engage our audience across various channels.</p>
-        <h2><strong>Key Responsibilities</strong></h2>
-        <ol>
-            <li>Assist in the development and execution of marketing campaigns.</li>
-            <li>Create engaging content for social media platforms and newsletters.</li>
-            <li>Conduct market research to identify trends and opportunities.</li>
-            <li>Monitor and analyze campaign performance metrics.</li>
-            <li>Collaborate with team members to brainstorm new marketing ideas.</li>
-        </ol>
-        <h2><strong>Skills Required</strong></h2>
-        <ol>
-            <li>Basic understanding of digital marketing principles.</li>
-            <li>Strong written and verbal communication skills.</li>
-            <li>Proficiency in social media platforms and marketing tools.</li>
-            <li>Creative thinking and problem-solving abilities.</li>
-            <li>Willingness to learn and adapt in a fast-paced environment.</li>
-        </ol>`,
-        salary: 77000,
-        date: 1729681667114,
-        category: "Marketing",
-    },
-    {
-        _id: '14',
-        title: "Data Scientist",
-        location: "California",
+        _id: '16',
+        title: "AI Researcher",
+        location: "Mathara",
         level: "Senior Level",
         companyId: {
             "_id": "670e4d25ca9fda8f1bf359b9",
             "name": "Slack",
-            "email": "slack@demo.com",
+            "email": "KIU@Div.com",
             "image": company_icon,
         },
         description: `
-        <p>Join our innovative team as a Data Scientist, where you will analyze complex data sets to drive strategic decision-making. You will leverage your statistical and programming skills to uncover insights and develop predictive models, contributing to the overall success of our organization.</p>
+        <p>Join us as an AI Researcher to work on cutting-edge artificial intelligence technologies. Your role will involve developing innovative models and algorithms to solve real-world problems.</p>
         <h2><strong>Key Responsibilities</strong></h2>
         <ol>
-            <li>Analyze large datasets to identify trends, patterns, and anomalies.</li>
-            <li>Develop and implement predictive models and algorithms.</li>
-            <li>Collaborate with cross-functional teams to understand business needs and provide data-driven solutions.</li>
-            <li>Visualize data findings and present insights to stakeholders.</li>
-            <li>Stay current with industry trends and best practices in data science.</li>
+            <li>Design and implement AI models and algorithms.</li>
+            <li>Analyze large datasets to derive meaningful insights.</li>
+            <li>Collaborate with engineering teams to deploy AI solutions.</li>
+            <li>Publish research findings in journals and conferences.</li>
+            <li>Stay updated on AI trends and advancements.</li>
         </ol>
         <h2><strong>Skills Required</strong></h2>
         <ol>
-            <li>Proficiency in programming languages such as Python or R.</li>
-            <li>Strong knowledge of statistical methods and machine learning techniques.</li>
-            <li>Experience with data visualization tools (e.g., Tableau, Power BI).</li>
-            <li>Excellent problem-solving skills and attention to detail.</li>
-            <li>Ability to communicate complex concepts to non-technical audiences.</li>
+            <li>Proficiency in Python and AI frameworks like TensorFlow or PyTorch.</li>
+            <li>Strong understanding of machine learning and deep learning.</li>
+            <li>Experience with natural language processing or computer vision.</li>
+            <li>Ability to analyze and process large datasets.</li>
+            <li>Excellent problem-solving and research skills.</li>
         </ol>`,
-        salary: 65000,
+        salary: 108000,
         date: 1729681667114,
         category: "Data Science",
     },
     {
-        _id: '15',
-        title: "UX/UI Designer",
-        location: "Hyderabad",
-        level: "Intermediate Level",
-        companyId: {
-            "_id": "670e4d25ca9fda8f1bf359b9",
-            "name": "Slack",
-            "email": "slack@demo.com",
-            "image": company_icon,
-        },
-        description: `
-        <p>We are seeking a talented UX/UI Designer to enhance our user experience across digital platforms. You will collaborate with product managers and developers to create intuitive and engaging interfaces that meet user needs and improve overall satisfaction.</p>
-        <h2><strong>Key Responsibilities</strong></h2>
-        <ol>
-            <li>Conduct user research and usability testing to inform design decisions.</li>
-            <li>Create wireframes, prototypes, and high-fidelity mockups for web and mobile applications.</li>
-            <li>Work closely with development teams to ensure designs are implemented accurately.</li>
-            <li>Iterate on designs based on user feedback and analytics.</li>
-            <li>Stay updated on design trends and best practices in UX/UI.</li>
-        </ol>
-        <h2><strong>Skills Required</strong></h2>
-        <ol>
-            <li>Proficiency in design tools such as Sketch, Figma, or Adobe XD.</li>
-            <li>Strong understanding of user-centered design principles.</li>
-            <li>Experience with responsive and adaptive design techniques.</li>
-            <li>Excellent communication skills and ability to work collaboratively.</li>
-            <li>A portfolio showcasing relevant design projects is required.</li>
-        </ol>`,
-        salary: 64000,
-        date: 1729681667114,
-        category: "Design",
-    },
-    {
-        _id: '16',
-        title: "DevOps Engineer",
-        location: "Bangalore",
-        level: "Senior Level",
-        companyId: {
-            "_id": "670e4d25ca9fda8f1bf359b9",
-            "name": "Slack",
-            "email": "slack@demo.com",
-            "image": company_icon,
-        },
-        description: `
-        <p>As a DevOps Engineer, you will play a crucial role in enhancing our software development and deployment processes. You will work with development and operations teams to automate workflows, improve system reliability, and ensure seamless integration and delivery of applications.</p>
-        <h2><strong>Key Responsibilities</strong></h2>
-        <ol>
-            <li>Design and implement CI/CD pipelines to automate application deployment.</li>
-            <li>Monitor system performance and troubleshoot issues proactively.</li>
-            <li>Collaborate with development teams to improve software development lifecycle.</li>
-            <li>Implement infrastructure as code using tools like Terraform or Ansible.</li>
-            <li>Ensure security best practices are followed in the deployment process.</li>
-        </ol>
-        <h2><strong>Skills Required</strong></h2>
-        <ol>
-            <li>Strong experience with cloud platforms (AWS, Azure, or GCP).</li>
-            <li>Proficiency in scripting languages such as Bash or Python.</li>
-            <li>Familiarity with containerization tools like Docker and orchestration platforms like Kubernetes.</li>
-            <li>Excellent troubleshooting and problem-solving skills.</li>
-            <li>Relevant certifications (e.g., AWS Certified DevOps Engineer) are a plus.</li>
-        </ol>`,
-        salary: 74000,
-        date: 1729681667114,
-        category: "Programming",
-    },
-    {
         _id: '17',
-        title: "Sales Manager",
-        location: "New York",
-        level: "Senior Level",
-        companyId: {
-            "_id": "670e4d25ca9fda8f1bf359b9",
-            "name": "Slack",
-            "email": "slack@demo.com",
-            "image": company_icon,
-        },
-        description: `
-        <p>Join our team as a Sales Manager, where you will lead our sales efforts to drive growth and increase market share. You will develop sales strategies, manage client relationships, and mentor your sales team to achieve performance goals.</p>
-        <h2><strong>Key Responsibilities</strong></h2>
-        <ol>
-            <li>Develop and implement strategic sales plans to achieve company objectives.</li>
-            <li>Manage and lead a team of sales representatives to meet and exceed sales targets.</li>
-            <li>Build and maintain strong relationships with key clients and stakeholders.</li>
-            <li>Analyze sales data and market trends to identify opportunities for growth.</li>
-            <li>Provide training and development opportunities for the sales team.</li>
-        </ol>
-        <h2><strong>Skills Required</strong></h2>
-        <ol>
-            <li>Proven experience in sales management and team leadership.</li>
-            <li>Strong negotiation and communication skills.</li>
-            <li>Ability to analyze data and make informed decisions.</li>
-            <li>Experience with CRM software (e.g., Salesforce).</li>
-            <li>A results-oriented mindset with a focus on meeting targets.</li>
-        </ol>`,
-        salary: 59000,
-        date: 1729681667114,
-        category: "Marketing",
-    },
-    {
-        _id: '18',
-        title: "Human Resources Specialist",
-        location: "Washington",
+        title: "Cybersecurity Specialist",
+        location: "Polonnaruwa",
         level: "Intermediate Level",
         companyId: {
             "_id": "670e4d25ca9fda8f1bf359b9",
             "name": "Slack",
-            "email": "slack@demo.com",
+            "email": "KIU@Div.com",
             "image": company_icon,
         },
         description: `
-        <p>As a Human Resources Specialist, you will support various HR functions, including recruitment, employee relations, and compliance. You will play a vital role in fostering a positive workplace culture and ensuring that our HR practices align with organizational goals.</p>
+        <p>We are hiring a Cybersecurity Specialist to protect our digital assets and ensure robust security across our systems. Join our team to develop and implement security measures against evolving cyber threats.</p>
         <h2><strong>Key Responsibilities</strong></h2>
         <ol>
-            <li>Assist with the recruitment process, including job postings and candidate screenings.</li>
-            <li>Support employee onboarding and orientation programs.</li>
-            <li>Manage employee records and ensure compliance with HR policies.</li>
-            <li>Provide guidance to employees on HR-related inquiries.</li>
-            <li>Help organize employee training and development initiatives.</li>
-        </ol>
-        <h2><strong>Skills Required</strong></h2>
-        <ol>
-            <li>Strong understanding of HR principles and practices.</li>
-            <li>Excellent communication and interpersonal skills.</li>
-            <li>Proficiency in HR software (e.g., HRIS, ATS).</li>
-            <li>Ability to maintain confidentiality and handle sensitive information.</li>
-            <li>Attention to detail and strong organizational skills.</li>
-        </ol>`,
-        salary: 89000,
-        date: 1729681667114,
-        category: "Management",
-    },
-    {
-        _id: '19',
-        title: "Content Marketing Manager",
-        location: "Mumbai",
-        level: "Senior Level",
-        companyId: {
-            "_id": "670e4d25ca9fda8f1bf359b9",
-            "name": "Slack",
-            "email": "slack@demo.com",
-            "image": company_icon,
-        },
-        description: `
-        <p>We are looking for a Content Marketing Manager to lead our content strategy and execution. In this role, you will develop compelling content that engages our audience and drives brand awareness. You will collaborate with various teams to ensure consistent messaging across all platforms.</p>
-        <h2><strong>Key Responsibilities</strong></h2>
-        <ol>
-            <li>Develop and implement a content marketing strategy aligned with business objectives.</li>
-            <li>Create and oversee the production of high-quality content for blogs, social media, and other channels.</li>
-            <li>Analyze content performance and optimize strategies based on data-driven insights.</li>
-            <li>Collaborate with designers and other stakeholders to ensure content aligns with visual branding.</li>
-            <li>Manage the content calendar and ensure timely delivery of content.</li>
-        </ol>
-        <h2><strong>Skills Required</strong></h2>
-        <ol>
-            <li>Proven experience in content marketing and strategy development.</li>
-            <li>Strong writing and editing skills with a keen eye for detail.</li>
-            <li>Familiarity with SEO best practices and content management systems.</li>
-            <li>Excellent analytical skills and ability to interpret data.</li>
-            <li>Strong leadership and project management skills.</li>
-        </ol>`,
-        salary: 99000,
-        date: 1729681667114,
-        category: "Marketing",
-    },
-    {
-        _id: '20',
-        title: "Graphic Designer",
-        location: "Chennai",
-        level: "Intermediate Level",
-        companyId: {
-            "_id": "670e4d25ca9fda8f1bf359b9",
-            "name": "Slack",
-            "email": "slack@demo.com",
-            "image": company_icon,
-        },
-        description: `
-        <p>Join our creative team as a Graphic Designer, where you will be responsible for creating visually appealing graphics and layouts that enhance our brand identity. You will collaborate with marketing and product teams to develop creative solutions for various projects.</p>
-        <h2><strong>Key Responsibilities</strong></h2>
-        <ol>
-            <li>Design graphics for digital and print media, including social media, websites, and marketing materials.</li>
-            <li>Collaborate with cross-functional teams to understand project requirements and objectives.</li>
-            <li>Stay updated on design trends and tools to continually enhance skills and creativity.</li>
-            <li>Prepare and present design concepts to stakeholders for feedback and approval.</li>
-            <li>Ensure all designs align with brand guidelines and project specifications.</li>
-        </ol>
-        <h2><strong>Skills Required</strong></h2>
-        <ol>
-            <li>Proficiency in design software such as Adobe Creative Suite (Photoshop, Illustrator, InDesign).</li>
-            <li>Strong understanding of design principles and typography.</li>
-            <li>Ability to work on multiple projects simultaneously and meet deadlines.</li>
-            <li>Excellent communication and collaboration skills.</li>
-            <li>A portfolio showcasing relevant design work is required.</li>
-        </ol>`,
-        salary: 91000,
-        date: 1729681667114,
-        category: "Design",
-    },
-    {
-        _id: '21',
-        title: "Software Tester",
-        location: "Chennai",
-        level: "Intermediate Level",
-        companyId: {
-            "_id": "670e4d25ca9fda8f1bf359b9",
-            "name": "Slack",
-            "email": "slack@demo.com",
-            "image": company_icon,
-        },
-        description: `
-        <p>As a Software Tester, you will play a critical role in ensuring the quality and reliability of our software applications. You will design test cases, execute tests, and collaborate with development teams to identify and resolve defects before product release.</p>
-        <h2><strong>Key Responsibilities</strong></h2>
-        <ol>
-            <li>Develop and execute test plans and test cases based on software requirements.</li>
-            <li>Identify, document, and track defects using bug tracking tools.</li>
-            <li>Collaborate with developers to resolve issues and improve software quality.</li>
-            <li>Conduct regression testing to ensure existing functionality remains intact.</li>
-            <li>Participate in team meetings to provide insights on product quality and testing status.</li>
-        </ol>
-        <h2><strong>Skills Required</strong></h2>
-        <ol>
-            <li>Experience with manual and automated testing techniques.</li>
-            <li>Familiarity with testing tools (e.g., Selenium, JUnit).</li>
-            <li>Strong analytical and problem-solving skills.</li>
-            <li>Excellent attention to detail and ability to work under tight deadlines.</li>
-            <li>Good communication skills to articulate testing outcomes and challenges.</li>
-        </ol>`,
-        salary: 123000,
-        date: 1729681667114,
-        category: "Programming",
-    },
-    {
-        _id: '22',
-        title: "Network Security Engineer",
-        location: "Bangalore",
-        level: "Senior Level",
-        companyId: {
-            "_id": "670e4d25ca9fda8f1bf359b9",
-            "name": "Slack",
-            "email": "slack@demo.com",
-            "image": company_icon,
-        },
-        description: `
-        <p>We are seeking a Network Security Engineer to protect our organization's IT infrastructure. You will design and implement security measures to safeguard systems from unauthorized access and ensure compliance with security policies.</p>
-        <h2><strong>Key Responsibilities</strong></h2>
-        <ol>
-            <li>Develop and implement security protocols for network systems.</li>
-            <li>Monitor network traffic for suspicious activity and respond to incidents.</li>
+            <li>Monitor network traffic for potential threats.</li>
             <li>Conduct vulnerability assessments and penetration testing.</li>
-            <li>Collaborate with IT teams to resolve security issues and enhance network security.</li>
-            <li>Stay updated on the latest security trends and technologies.</li>
+            <li>Implement and manage security tools and protocols.</li>
+            <li>Develop incident response plans and handle breaches.</li>
+            <li>Train employees on cybersecurity best practices.</li>
         </ol>
         <h2><strong>Skills Required</strong></h2>
         <ol>
-            <li>Strong knowledge of networking protocols and security technologies.</li>
-            <li>Experience with firewalls, VPNs, IDS/IPS, and security information systems.</li>
-            <li>Relevant certifications (e.g., CISSP, CISM, CEH) are preferred.</li>
-            <li>Excellent analytical and troubleshooting skills.</li>
-            <li>Strong communication skills to work with technical and non-technical teams.</li>
+            <li>Proficiency in security tools like firewalls, IDS/IPS.</li>
+            <li>Experience with encryption, VPNs, and endpoint protection.</li>
+            <li>Knowledge of security frameworks like NIST or ISO 27001.</li>
+            <li>Strong analytical and troubleshooting skills.</li>
+            <li>Relevant certifications (e.g., CEH, CISSP) are a plus.</li>
         </ol>`,
-        salary: 87000,
+        salary: 80000,
         date: 1729681667114,
         category: "Cybersecurity",
     },
     {
-        _id: '23',
-        title: "Cloud Engineer",
-        location: "Hyderabad",
-        level: "Intermediate Level",
+        _id: '18',
+        title: "Technical Support Engineer",
+        location: "Polonnaruwa",
+        level: "Junior Level",
         companyId: {
             "_id": "670e4d25ca9fda8f1bf359b9",
             "name": "Slack",
-            "email": "slack@demo.com",
+            "email": "KIU@Div.com",
             "image": company_icon,
         },
         description: `
-        <p>Join our technology team as a Cloud Engineer, where you will be responsible for designing and managing our cloud infrastructure. You will collaborate with development and operations teams to ensure the efficient deployment and scaling of applications.</p>
+        <p>We are looking for a Technical Support Engineer to provide exceptional support to our customers and ensure smooth operation of our products and services.</p>
         <h2><strong>Key Responsibilities</strong></h2>
         <ol>
-            <li>Design and implement cloud solutions using AWS, Azure, or Google Cloud Platform.</li>
-            <li>Monitor and optimize cloud resources for performance and cost efficiency.</li>
-            <li>Work with DevOps teams to automate deployment processes.</li>
-            <li>Ensure cloud security and compliance with industry standards.</li>
-            <li>Provide technical support and troubleshooting for cloud-based applications.</li>
+            <li>Respond to customer inquiries and resolve technical issues.</li>
+            <li>Diagnose and troubleshoot hardware and software problems.</li>
+            <li>Document technical issues and provide solutions.</li>
+            <li>Collaborate with engineering teams for complex problems.</li>
+            <li>Assist in system updates and maintenance tasks.</li>
         </ol>
         <h2><strong>Skills Required</strong></h2>
         <ol>
-            <li>Experience with cloud platforms and services.</li>
-            <li>Proficiency in scripting languages such as Python or Bash.</li>
-            <li>Strong understanding of networking concepts and security.</li>
-            <li>Experience with container orchestration tools like Kubernetes.</li>
-            <li>Good problem-solving skills and attention to detail.</li>
+            <li>Excellent problem-solving and communication skills.</li>
+            <li>Familiarity with operating systems like Windows and Linux.</li>
+            <li>Basic knowledge of networking and IT systems.</li>
+            <li>Ability to learn new technologies quickly.</li>
+            <li>Strong customer service orientation.</li>
         </ol>`,
-        salary: 102000,
+        salary: 50000,
         date: 1729681667114,
-        category: "Programming",
+        category: "IT Support",
+    },
+    {
+        _id: '19',
+        title: "Content Writer",
+        location: "Polonnaruwa",
+        level: "Entry Level",
+        companyId: {
+            "_id": "670e4d25ca9fda8f1bf359b9",
+            "name": "Slack",
+            "email": "KIU@Div.com",
+            "image": company_icon,
+        },
+        description: `
+        <p>We are seeking a Content Writer to produce engaging and high-quality content that aligns with our brand voice and marketing objectives.</p>
+        <h2><strong>Key Responsibilities</strong></h2>
+        <ol>
+            <li>Write and edit articles, blog posts, and marketing copy.</li>
+            <li>Research industry-related topics and trends.</li>
+            <li>Collaborate with the marketing team to develop content strategies.</li>
+            <li>Proofread and ensure all content meets quality standards.</li>
+            <li>Optimize content for SEO and user engagement.</li>
+        </ol>
+        <h2><strong>Skills Required</strong></h2>
+        <ol>
+            <li>Strong writing and editing skills.</li>
+            <li>Basic understanding of SEO principles.</li>
+            <li>Creativity and ability to produce original content.</li>
+            <li>Time management and organizational skills.</li>
+            <li>Experience with CMS platforms like WordPress is a plus.</li>
+        </ol>`,
+        salary: 40000,
+        date: 1729681667114,
+        category: "Content Creation",
     }
+    
+
 ];
+
