@@ -108,7 +108,7 @@ export const manageJobsData = [
 ];
 
 // Sample data for Profile Page
-export const jobsApplied = [
+export const internsApplied = [
     {
         company: 'Amazon',
         title: 'Full Stack Developer',
