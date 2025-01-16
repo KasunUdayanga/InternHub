@@ -1,4 +1,4 @@
 #InternHub
 3.19
 add home page
-and add appaly 
+and add appal
