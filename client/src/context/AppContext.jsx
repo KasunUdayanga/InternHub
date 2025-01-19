@@ -12,6 +12,7 @@ export const AppContextProvider=(props)=>{
     })
     const [isSearched,setIsSearched]=useState(false)
     const [jobs, setJobs]=useState([])
+    const [shreclogin,setShreclogin]=useState(false)
 
     const fetchJobs =async()=>{
         setJobs(internCard); 
@@ -25,7 +26,8 @@ export const AppContextProvider=(props)=>{
         setSearchFilter,
         isSearched,
         setIsSearched,
-        jobs,setJobs
+        jobs,setJobs,
+        shreclogin,setShreclogin
     }
 
 

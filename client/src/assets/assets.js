@@ -8,7 +8,6 @@ import ibmlogo from "./R (1).png";
 import virtusa from "./virtusa-logo.png";
 import accenture_logo from "./accenture_logo.png";
 import profile_img from "./profile_img.png";
-import app_main_img from "./app_main_img.png";
 import cross_icon from './cross_icon.svg';
 import location_icon from './location_icon.svg';
 import money_icon from './money_icon.svg';
@@ -17,9 +16,6 @@ import person_icon from './person_icon.svg';
 import upload_area from './upload_area.svg';
 import resume_selected from './resume_selected.svg';
 import resume_not_selected from './resume_not_selected.svg';
-import play_store from './play_store.svg';
-import app_store from './app_store.svg';
-import back_arrow_icon from './back_arrow_icon.svg';
 import left_arrow_icon from './left_arrow_icon.svg';
 import right_arrow_icon from './right_arrow_icon.svg';
 import facebook_icon from './facebook_icon.svg'
@@ -51,10 +47,6 @@ export const assets = {
     microsoft_logo,
     walmart_logo,
     accenture_logo,
-    app_main_img,
-    play_store,
-    app_store,
-    back_arrow_icon,
     left_arrow_icon,
     right_arrow_icon,
     location_icon,

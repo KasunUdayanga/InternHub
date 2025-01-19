@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { assets } from '../assets/assets'
 import { useClerk,useUser,UserButton } from '@clerk/clerk-react'
 import { Link, useNavigate } from 'react-router-dom'
+import { AppContext } from '../context/AppContext'
 
 
 
@@ -9,6 +10,7 @@ const Navbar = () => {
     const{openSignIn} =useClerk()
     const{user}=useUser()
     const navigate =useNavigate()
+    const {setShreclogin}=useContext(AppContext)
 
 
 
@@ -26,8 +28,8 @@ const Navbar = () => {
                 </div>
             ):(
         <div className='flex gap-5 max-sm:text-xs'>
-            <button className='text-gray-600'> Recrute Login</button>
-            <button onClick={ e =>openSignIn()}className='bg-green-500 hover:bg-green-700 text-white py-2 px-6 rounded-full'>Login</button>
+            <button onClick={ e => setShreclogin(true)} className='text-gray-600' > Recrute Login</button>
+            <button onClick={ e => openSignIn()}className='bg-green-500 hover:bg-green-700 text-white py-2 px-6 rounded-full'>Login</button>
         </div>
          )
         }
