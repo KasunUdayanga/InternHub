@@ -9,6 +9,7 @@ import Dashboard from './pages/dashboard';
 import AddIntern from './pages/addIntern';
 import ManageIntern from './pages/manegeIntern';
 import ViweApplication from './pages/viweApplication';
+import 'quill/dist/quill.snow.css'
 
 
 const App = () => {
