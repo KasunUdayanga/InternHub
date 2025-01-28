@@ -3,4 +3,3 @@
 backend 
 connect vercel 
 cleark
-setry
