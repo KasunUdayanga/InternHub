@@ -3,4 +3,4 @@
 backend 
 connect vercel 
 cleark
-initial 
+initials 
