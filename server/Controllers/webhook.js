@@ -32,7 +32,7 @@ export const clerkWebhook =async(req,res)=>{
                     name:Date.first_name+" "+data.last_name,
                     image:data.image_url,
                 };  
-                await User.findOneAndUpdate(Date.id,UserData);
+                await User.findByIdAndUpdate(Date.id,UserData);
                 res.json({});
                 break;     
             }
