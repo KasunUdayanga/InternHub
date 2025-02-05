@@ -8,11 +8,7 @@
                 "includeFiles": [
                     "dist/**"
                 ]
-            },"functions": {
-    "app/api/**/*": {
-      "maxDuration": 20
-    }
-  }
+            }
         }
     ],
     "routes": [
@@ -20,7 +16,7 @@
             "src": "/(.*)",
             "dest": "server.js"
         }
-    ]
+    ],
     
     
 }
