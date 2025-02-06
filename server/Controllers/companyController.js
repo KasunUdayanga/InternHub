@@ -47,8 +47,38 @@ export const registerCompany = async (req, res) => {
 }
 
 export const loginCompany = async (req, res) => {
-    
-}
+    const { email, password } = req.body;
+
+    try {
+        const company = await Company.findOne({ email });
+
+        // Check if company exists
+        if (!company) {
+            return res.status(401).json({ success: false, message: "Invalid email or password" });
+        }
+
+        // Compare passwords
+        const isMatch = await bcrypt.compare(password, company.password);
+        if (!isMatch) {
+            return res.status(401).json({ success: false, message: "Invalid email or password" });
+        }
+
+        // Send success response with token
+        res.json({
+            success: true,
+            company: {
+                _id: company._id,
+                name: company.name,
+                email: company.email,
+                image: company.image
+            },
+            token: generateToken(company._id)
+        });
+    } catch (error) {
+        res.status(500).json({ success: false, message: error.message });
+    }
+};
+
 
 export const getCompanyData = async (req, res) => {
     
