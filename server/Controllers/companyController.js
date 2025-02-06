@@ -2,6 +2,7 @@ import Company from "../Models/Company.js";
 import bcrypt from "bcrypt";
 import {v2 as cloudinary} from 'cloudinary';
 import generateToken from "../utils/generateToken.js";
+import intern from "../models/Intern.js";
 
 
 
@@ -84,6 +85,24 @@ export const getCompanyData = async (req, res) => {
     
 }
 export const postIntern = async (req, res) => {
+    const {title, description, location, salary,level,category} = req.body;
+    const companyId = req.company._id;
+   try {
+     const newIntern =new intern({
+            title,
+            description,
+            location,
+            salary,
+            companyId,
+            date: Date.now(),
+            level,
+            category
+     })
+        await newIntern.save();
+        res.json({success: true, newIntern})
+   } catch (error) {
+         res.json({success: false, message: error.message})
+   }
     
 }
 export const getCompanyInternApplicants = async (req, res) => {
