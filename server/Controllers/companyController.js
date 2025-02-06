@@ -1,13 +1,14 @@
 import Company from "../Models/Company.js";
 import bcrypt from "bcrypt";
 import {v2 as cloudinary} from 'cloudinary';
+import generateToken from "../utils/generateToken.js";
 
 
 
 
 
 export const registerCompany = async (req, res) => {
-    
+
         const {name, email, password} = req.body;
         const imageFile =req.file;
         if (!name || !email || !password || !imageFile) {
