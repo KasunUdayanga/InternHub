@@ -7,6 +7,7 @@ import * as Sentry from "@sentry/node";
 import { clerkWebhook } from './Controllers/webhook.js';
 import companyRoutes from './routes/companyRoutes.js';
 import connectCloudinary from './config/cloudinary.js';
+import internRoutes from './routes/internRoutes.js';
 
 
 const app = express();
@@ -26,6 +27,7 @@ app.get("/debug-sentry", function mainHandler(req, res) {
   });
 app.post('/webhook',clerkWebhook);
 app.use('/api/company',companyRoutes);
+app.use('/api/interns',internRoutes);
 
 
 

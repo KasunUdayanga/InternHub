@@ -8,6 +8,7 @@ import intern from "../models/Intern.js";
 
 
 
+
 export const registerCompany = async (req, res) => {
 
         const {name, email, password} = req.body;
@@ -82,7 +83,12 @@ export const loginCompany = async (req, res) => {
 
 
 export const getCompanyData = async (req, res) => {
-    
+    const company = req.company
+    try {
+        res.json({success: true, company})
+    } catch (error) {
+        res.json({sucess:false,error: error.message})
+    }
 }
 export const postIntern = async (req, res) => {
     const {title, description, location, salary,level,category} = req.body;
@@ -109,12 +115,36 @@ export const getCompanyInternApplicants = async (req, res) => {
     
 }
 export const getCompanyPostedIntern = async (req, res) => {
-    
+    try {
+        const companyId=req.company._id
+
+        const interns = await intern.find({companyId})
+        // add number of applicants info in data
+
+        res.json({success: true, internData:interns})
+
+    } catch (error) {
+        res.json({success: false, error: error.message})
+    }
 }
 
 export const ChangeInternApplicationStatus = async (req, res) => {
     
 }
 export const changeVisibility = async (req, res) => {
+   try {
+    const {id} =req.body
+    const companyId=req.company.id
     
+    
+    const Intern =await intern.findById(id)
+    if (companyId.toString() === Intern.companyId.toString()) {
+        Intern.visible=!Intern.visible 
+    }
+    await Intern.save()
+    res.json({success:true, Intern})
+   } catch (error) {
+         res.json({success:false, error:error.message})
+   }
+
 }
