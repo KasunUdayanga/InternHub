@@ -10,6 +10,7 @@ import AddIntern from './pages/addIntern';
 import ManageIntern from './pages/manegeIntern';
 import ViweApplication from './pages/viweApplication';
 import 'quill/dist/quill.snow.css'
+import { ToastContainer, toast } from 'react-toastify';
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
   return (
     <div>
       {shreclogin && <Recruterlog />}
+      <ToastContainer />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/applyintern/:id" element={<Applyintern />} />
