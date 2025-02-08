@@ -1,6 +1,6 @@
-import intern from "../Models/Intern.js";
-import InternApplication from "../Models/InternApplication.js";
-import User from "../Models/User.js";
+import intern from "../models/Intern.js";
+import InternApplication from "../models/InternApplication.js";
+import User from "../models/User.js";
 import {v2 as cloudinary} from 'cloudinary';
 
 export const getUserData = async(req,res)=>{

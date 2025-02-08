@@ -1,9 +1,9 @@
-import Company from "../Models/Company.js";
+import Company from "../models/Company.js";
 import bcrypt from "bcrypt";
 import {v2 as cloudinary} from 'cloudinary';
 import generateToken from "../utils/generateToken.js";
-import intern from "../Models/Intern.js";
-import InternApplication from "../Models/InternApplication.js";
+import intern from "../models/Intern.js";
+import InternApplication from "../models/InternApplication.js";
 
 
 
