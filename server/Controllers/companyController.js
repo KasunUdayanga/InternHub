@@ -3,6 +3,7 @@ import bcrypt from "bcrypt";
 import {v2 as cloudinary} from 'cloudinary';
 import generateToken from "../utils/generateToken.js";
 import intern from "../models/Intern.js";
+import InternApplication from "../models/InternApplication.js";
 
 
 
@@ -121,7 +122,12 @@ export const getCompanyPostedIntern = async (req, res) => {
         const interns = await intern.find({companyId})
         // add number of applicants info in data
 
-        res.json({success: true, internData:interns})
+        const internData = await Promise.all(interns.map(async (intern) => {
+            const applicants = await InternApplication.find({internId: intern._id})
+        return{...intern.toObject(), applicants: applicants.length}
+        }))
+
+        res.json({success: true, internData})
 
     } catch (error) {
         res.json({success: false, error: error.message})

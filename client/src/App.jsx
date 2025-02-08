@@ -14,7 +14,7 @@ import { ToastContainer, toast } from 'react-toastify';
 
 
 const App = () => {
-  const { shreclogin } = useContext(AppContext);
+  const { shreclogin,companyToken } = useContext(AppContext);
 
   return (
     <div>
@@ -25,9 +25,12 @@ const App = () => {
         <Route path="/applyintern/:id" element={<Applyintern />} />
         <Route path="/application" element={<Application />} />
         <Route path="/dashboard" element={<Dashboard />}>
+        {companyToken ?<>
           <Route path="addIntern" element={<AddIntern />} />
           <Route path="manageintern" element={<ManageIntern />} />
           <Route path="viewapplication" element={<ViweApplication />} />
+        </>:null}
+         
         </Route>
       </Routes>
     </div>
