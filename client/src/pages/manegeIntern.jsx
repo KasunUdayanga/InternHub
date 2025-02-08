@@ -4,10 +4,11 @@ import { useNavigate } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import Loading from '../Component/Loading';
 
 const ManageIntern = () => {
   const navigate = useNavigate();
-  const [intern, setIntern] = useState([]); 
+  const [intern, setIntern] = useState(false); 
   const { backendUrl, companyToken } = useContext(AppContext);
 
   const fetchCompanyIntern = async () => {
@@ -49,7 +50,9 @@ const ManageIntern = () => {
     }
   }, [companyToken]);
 
-  return (
+  return intern ? intern.length === 0 ?(<div className='flex items-center justify-center h-[70vh]'>
+    <p className='text-xl sm:text-2xl'>No Intern Available</p>
+  </div>): (
     <div className="container p-4 max-w-5xl">
       <div className="overflow-x-auto">
         <table className="min-w-full bg-white border border-gray-200 max-sm:text-sm">
@@ -93,7 +96,7 @@ const ManageIntern = () => {
         </button>
       </div>
     </div>
-  );
+  ):<Loading/>
 };
 
 export default ManageIntern;

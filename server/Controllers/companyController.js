@@ -110,17 +110,25 @@ export const postIntern = async (req, res) => {
    } catch (error) {
          res.json({success: false, message: error.message})
    }
-    
 }
 export const getCompanyInternApplicants = async (req, res) => {
-    
+    try {
+        const companyId = req.company._id;
+        const applications = await InternApplication.find({companyId})
+        .populate('userId','name image resume')
+        .populate('internId','title location category level salary')
+        .exec()
+        return res.json({success: true, applications})
+    } catch (error) {
+        res.json({success: false,error: error.message})
+    }
 }
 export const getCompanyPostedIntern = async (req, res) => {
     try {
         const companyId=req.company._id
 
         const interns = await intern.find({companyId})
-        // add number of applicants info in data
+
 
         const internData = await Promise.all(interns.map(async (intern) => {
             const applicants = await InternApplication.find({internId: intern._id})
@@ -135,7 +143,15 @@ export const getCompanyPostedIntern = async (req, res) => {
 }
 
 export const ChangeInternApplicationStatus = async (req, res) => {
+    try {
+        const {id,status}= req.body
+
+    await InternApplication.findOneAndUpdate({_id:id}, {status})
     
+    res.json({success: true, message: "Application status updated"})
+    } catch (error) {
+        res.json({success: false, message: error.message})
+    }
 }
 export const changeVisibility = async (req, res) => {
    try {
