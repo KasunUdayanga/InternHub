@@ -1,4 +1,4 @@
-import intern from "../models/Intern.js"
+import intern from "../Models/Intern.js"
 
 export const getIntern= async (req,res)=>{
         try {
