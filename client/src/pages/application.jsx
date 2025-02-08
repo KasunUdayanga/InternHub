@@ -1,21 +1,44 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import moment from 'moment'; 
 import Navbar from '../Component/Navbar';
-import { assets, internsApplied } from '../assets/assets';
+import { assets } from '../assets/assets';
 import Footer from '../Component/Footer';
+import { AppContext } from '../context/AppContext';
+import { useAuth, useUser } from '@clerk/clerk-react';
+import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const Application = () => {
+  const{user}=useUser();
+  const {getToken}=useAuth()
   const [isEdit, setIsEdit] = useState(false);
   const [resume, setResume] = useState(null);
 
-  const handleSaveResume = () => {
-    if (resume) {
-      console.log('Resume saved:', resume.name);
-      setIsEdit(false);
-    } else {
-      alert('Please select a resume to save.');
+  const{backendUrl,userData,userApplication,fetchUserData}=useContext(AppContext)
+
+  const updateResume=async()=>{
+    try {
+      const formData=new FormData();
+      formData.append('resume',resume)
+      const token=await getToken()
+
+      const{data}=await axios.post(`${backendUrl}/api/users/update-resume`,formData,{
+        headers:{Authorization:`Bearer ${token}`}})
+        if(data.success){
+          toast.success(data.message)
+          await fetchUserData()
+         
+        }else{
+          toast.error(data.message)
+        }
+    } catch (error) {
+      toast.error(error.response?.data?.message || error.message)
     }
-  };
+    setIsEdit(false)
+    setResume(null)
+  }
+
+  
 
   return (
     <>
@@ -24,11 +47,11 @@ const Application = () => {
         {/* Resume Section */}
         <h2 className="text-xl font-semibold">Your Resume</h2>
         <div className="flex gap-2 mb-6 mt-3">
-          {isEdit ? (
+          {isEdit || userData && userData.resume ==="" ? (
             <>
               <label className="flex items-center" htmlFor="resumeUpload">
                 <p className="bg-green-100 text-green-600 px-4 py-2 rounded-lg mr-2">
-                  Select Resume
+                  {resume? resume.name :"select resume"}
                 </p>
                 <input
                   type="file"
@@ -41,7 +64,7 @@ const Application = () => {
               </label>
               <button
                 className="bg-green-100 border border-green-600 rounded-lg px-4 py-2"
-                onClick={handleSaveResume}
+                onClick={updateResume}
               >
                 Save
               </button>
@@ -79,14 +102,14 @@ const Application = () => {
             </tr>
           </thead>
           <tbody>
-            {internsApplied.map((intern, index) => (
+            {userApplication.map((intern, index) => (
               <tr key={index} className="text-center ">
                 <td className=" border-b px-4 py-2 flex items-center gap-2">
-                  <img src={intern.logo} alt={`${intern.company} logo`} className="w-8 h-8" />
-                  {intern.company}
+                  <img src={intern.logo} alt={`${intern.companyId.image} logo`} className="w-8 h-8" />
+                  {intern.companyId.name}
                 </td>
-                <td className=" border-b px-4 py-2">{intern.title}</td>
-                <td className=" border-b px-4 py-2">{intern.location}</td>
+                <td className=" border-b px-4 py-2">{intern.internId.title}</td>
+                <td className=" border-b px-4 py-2">{intern.internId.location}</td>
                 <td className=" border-b px-4 py-2">
                   {moment(intern.date).format('ll')}
                 </td>

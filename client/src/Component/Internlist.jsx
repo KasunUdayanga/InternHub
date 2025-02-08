@@ -4,13 +4,13 @@ import { assets, JobCategories, JobLocations } from "../assets/assets";
 import InternCard from "./InternCard.jsx";
 
 const Internlist = () => {
-  const { isSearched, searchFilter, setSearchFilter, jobs } =
+  const { isSearched, searchFilter, setSearchFilter, interns } =
     useContext(AppContext);
   const [showFilter, setShowFilter] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [selectedLocations, setSelectedLocations] = useState([]);
-  const [filteredJobs, setFilteredJobs] = useState(jobs);
+  const [filteredJobs, setFilteredJobs] = useState(interns);
 
   const handleCategoryChange = (category) => {
     setSelectedCategories((prev) =>
@@ -42,7 +42,7 @@ const Internlist = () => {
       searchFilter.location === "" ||
       job.location.toLowerCase().includes(searchFilter.location.toLowerCase());
 
-    const newFilteredJobs = jobs
+    const newFilteredJobs = interns
       .slice()
       .reverse()
       .filter(
@@ -54,7 +54,7 @@ const Internlist = () => {
       );
     setFilteredJobs(newFilteredJobs);
     setCurrentPage(1);
-  }, [jobs, selectedCategories, selectedLocations, searchFilter]);
+  }, [interns, selectedCategories, selectedLocations, searchFilter]);
 
   return (
     <div className="container 2xl:px-20 mx-auto flex flex-col lg:flex-row max-lg:space-y-8 py-8">

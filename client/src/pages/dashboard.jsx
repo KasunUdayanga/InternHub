@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 import { assets } from '../assets/assets'
 import { AppContext } from '../context/AppContext'
@@ -8,7 +8,18 @@ import { AppContext } from '../context/AppContext'
 const Dashboard = () => {
 
   const navigate= useNavigate()
-  const {companyData}= useContext(AppContext);
+  const {companyData,setCompanyData,setCompanyToken}= useContext(AppContext);
+
+  const logout=()=>{
+    setCompanyData(null)
+    setCompanyToken(null)
+    localStorage.removeItem('companyToken')
+    navigate('/')
+  }
+// useEffect(()=>{
+//   if(companyData){
+//     navigate('/dashboard/manageintern')
+//   }})
 
 
   return (
@@ -21,9 +32,9 @@ const Dashboard = () => {
             <p className='max-sm:hidden'>Welcome {companyData.name}</p>
             <div className='relative group'>
               <img className='w-8 border rounded-full' src={companyData.image} alt="" />
-              <div className='absolute hidden group-hover:block top- right-0 z-10 text-black rounded pt-12'>
-                <ul className='list-none m-0 p-2 bg-white rounded-md border text-sm'>
-                  <li className='py-1 px-2 cursor-pointer pr-10'>Logout</li>
+              <div className='absolute hidden group-hover:block top-1 right-1 z-30 text-black rounded pt-12'>
+                <ul className='list-none m-0 p-1  bg-red-300 rounded-lg border text-sm'>
+                  <li onClick={logout} className='py-1 px-2 cursor-pointer pr-10'>Logout</li>
                 </ul>
               </div>
             </div>

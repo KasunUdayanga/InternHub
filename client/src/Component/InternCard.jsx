@@ -1,5 +1,4 @@
 import React from "react";
-import { assets } from "../assets/assets";
 import { useNavigate } from "react-router-dom";
 
 const InternCard = ({ intern }) => {
@@ -8,7 +7,7 @@ const InternCard = ({ intern }) => {
   return (
     <div className="border p-6 shadow-lg rounded">
       <div className="flex justify-between items-center">
-        <img className="h-8" src={assets.company_icon} alt="" />
+        <img className="h-8" src={intern.companyId.image} alt="" />
       </div>
       <h4 className="font-medium text-xl mt-2">{intern.title}</h4>
       <div className="flex items-center gap-3 mt-2 text-xs">

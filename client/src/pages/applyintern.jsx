@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
 import Loading from '../Component/Loading';
 import Navbar from '../Component/Navbar';
@@ -7,26 +7,94 @@ import { assets } from '../assets/assets';
 import kconvert from 'k-convert';
 import moment from 'moment';
 import Footer from '../Component/Footer';
-import InternCard from '../Component/InternCard'; // Ensure the path is correct
+import InternCard from '../Component/InternCard'; 
+import axios from 'axios';
+import { toast } from 'react-toastify';
+import { useAuth } from '@clerk/clerk-react';
 
 const ApplyIntern = () => {
   const { id } = useParams();
+  const { getToken } = useAuth();
+  const navigate = useNavigate();
   const [intern, setIntern] = useState(null);
-  const { jobs } = useContext(AppContext);
+  const [isAlreadyApplied, setIsAlreadyApplied] = useState(false);
+  const { interns, backendUrl, userData, userApplication, fetchUserApplications } = useContext(AppContext);
 
-  const fetchJob = async () => {
-    if (jobs && jobs.length > 0) {
-      const data = jobs.filter((job) => job._id === id);
-      if (data.length !== 0) {
-        setIntern(data[0]);
+  // ✅ Fetch Intern Details
+  const fetchInterns = async () => {
+    try {
+      const { data } = await axios.get(`${backendUrl}/api/interns/${id}`);
+      if (data.success) {
+        setIntern(data.Intern);
+      } else {
+        toast.error(data.message);
       }
-      console.log(data[0]);
+    } catch (error) {
+      toast.error(error.response?.data?.message || "Failed to fetch intern.");
+      console.error("Error fetching intern:", error);
     }
   };
 
+  // ✅ Apply for Internship
+  const applyHandlers = async () => {
+    try {
+      if (!userData) {
+        toast.error("Please login to apply for intern.");
+        return;
+      }
+
+      if (!userData.resume) {
+        navigate('/applications'); 
+        toast.error("Upload resume to apply.");
+        return;
+      }
+
+      const token = await getToken();
+      if (!token) {
+        toast.error("Authentication failed. Please log in again.");
+        return;
+      }
+
+      const { data } = await axios.post(
+        `${backendUrl}/api/users/apply`,
+        { internId: intern._id },
+        { headers: { Authorization: `Bearer ${token}` } }
+      );
+
+      if (data.success) {
+        toast.success(data.message);
+        fetchUserApplications()
+   
+       
+
+      } else {
+        toast.error(data.error?.message || "Already Applied.");
+      }
+    } catch (error) {
+      console.error("Error applying for internship:", error);
+      toast.error(error.response?.data?.message || "An unexpected error occurred.");
+    }
+  };
+
+  // ✅ Check if User Already Applied
+  const checkAlreadyApplied = () => {
+    if (intern) {
+      const hasApplied = userApplication.some(item => item.internId._id === intern._id);
+      setIsAlreadyApplied(hasApplied);
+    }
+  };
+
+  // ✅ Fetch Intern Details when ID Changes
   useEffect(() => {
-    fetchJob();
-  }, [id, jobs]);
+    fetchInterns();
+  }, [id]);
+
+  // ✅ Check Application Status when User Data Updates
+  useEffect(() => {
+    if (userApplication.length > 0 && intern) {
+      checkAlreadyApplied();
+    }
+  }, [intern, userApplication]);
 
   return intern ? (
     <>
@@ -63,7 +131,9 @@ const ApplyIntern = () => {
               </div>
             </div>
             <div className="flex flex-col justify-center text-end text-sm max-md:mx-auto max-md:text-center">
-              <button className="bg-green-600 p-2.5 px-10 text-white rounded">Apply Now</button>
+              <button onClick={applyHandlers} className="bg-green-600 p-2.5 px-10 text-white rounded">
+                {isAlreadyApplied ? 'Already Applied' : 'Apply Now'}
+              </button>
               <p className="mt-2 text-gray-600">Posted {moment(intern.date).fromNow()}</p>
             </div>
           </div>
@@ -74,16 +144,23 @@ const ApplyIntern = () => {
                 className="rich-text"
                 dangerouslySetInnerHTML={{ __html: intern.description }}
               ></div>
-              <button className="bg-green-600 p-2.5 px-10 text-white rounded mt-10">Apply Now</button>
+              <button onClick={applyHandlers} className="bg-green-600 p-2.5 px-10 text-white rounded mt-10">
+                {isAlreadyApplied ? 'Already Applied' : 'Apply Now'}
+              </button>
             </div>
             <div className="w-full lg:w-1/3 mt-8 lg:mt-0 lg:ml-8 space-y-5">
               <h1 className='text-xl font-medium'>More Internships from {intern.companyId.name}</h1>
-              {jobs
-                .filter((job) => job._id !== intern._id && job.companyId._id === intern.companyId._id)
-                .slice(0, 2)
-                .map((job, index) => (
-                  <InternCard key={index} intern={job} />
-                ))}
+              {interns
+  .filter(job => job._id !== intern._id && job.companyId._id === intern.companyId._id) 
+  .filter(job => {
+    const appliedInternsId = new Set(userApplication.map(app => app.internId && app.internId._id));
+    return !appliedInternsId.has(job._id); 
+  })
+  .slice(0, 2)
+  .map((job, index) => (
+    <InternCard key={index} intern={job} /> 
+  ))}
+
             </div>
           </div>
         </div>
