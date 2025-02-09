@@ -21,7 +21,7 @@ Intern Hub is a web-based platform designed to connect students with internship 
 
 The frontend is built with React.js+vite and provides a seamless user experience.
 
-![Frontend Interface](TechHeaven/assets/Screenshot2024-05-30212558.png)
+![Frontend Interface](client\src\assets\src.jpg)
 
 
 Intern Hub is a web-based platform designed to connect students with internship opportunities, making the process easier for both applicants and recruiters.
