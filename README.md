@@ -27,4 +27,35 @@ Clone the repository:
    ```sh
    git clone https://github.com/your-username/intern-hub.git
    cd intern-hub
- 
+ ```
+ **Install dependencies for both frontend and backend:**
+   ```sh
+   cd frontend
+   npm install
+   cd ../backend
+   npm install
+   ```
+
+ **Set up environment variables:**
+   Create a `.env` file in the root of the backend directory and add the following:
+   ```
+   JWT_SECRET="random#secret"
+   STRIPE_SECRET_KEY="your key"
+   ```
+
+ **Start the development servers:**
+   - **Backend:**
+     ```sh
+     cd backend
+     npm run server
+     ```
+   - **Frontend:**
+     ```sh
+     cd frontend
+     npm run dev
+     ```
+   - **Admin Panel:**
+     ```sh
+     cd admin
+     npm run dev
+     ```
