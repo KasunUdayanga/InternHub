@@ -78,7 +78,7 @@ Clone the repository:
 
    ## Contributing
 
-We welcome contributions to enhance the TechHaven platform. Please follow these steps to contribute:
+We welcome contributions to enhance the InternHub platform. Please follow these steps to contribute:
 
 1. Fork the repository.
 2. Create a new branch (`git checkout -b feature/your-feature-name`).
