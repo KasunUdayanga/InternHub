@@ -54,8 +54,6 @@ Clone the repository:
    ```
       VITE_CLERK_PUBLISHABLE_KEY="your_clerk_publishable_key"
       VITE_BACKEND_URL="http://localhost:5000"
-
-
    ```
 
  **Start the development servers:**
