@@ -18,7 +18,7 @@ const ApplyIntern = () => {
   const navigate = useNavigate();
   const [intern, setIntern] = useState(null);
   const [isAlreadyApplied, setIsAlreadyApplied] = useState(false);
-  const { interns, backendUrl, userData, userApplication, fetchUserApplications } = useContext(AppContext);
+  const { interns, backendUrl, userData, userApplication = [], fetchUserApplications } = useContext(AppContext);
 
   // ✅ Fetch Intern Details
   const fetchInterns = async () => {
@@ -57,16 +57,13 @@ const ApplyIntern = () => {
 
       const { data } = await axios.post(
         `${backendUrl}/api/users/apply`,
-        { internId: intern._id },
+        { internId: intern?._id }, // ✅ Optional chaining
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
       if (data.success) {
         toast.success(data.message);
-        fetchUserApplications()
-   
-       
-
+        fetchUserApplications();
       } else {
         toast.error(data.error?.message || "Already Applied.");
       }
@@ -78,10 +75,10 @@ const ApplyIntern = () => {
 
   // ✅ Check if User Already Applied
   const checkAlreadyApplied = () => {
-    if (intern) {
-      const hasApplied = userApplication.some(item => item.internId._id === intern._id);
-      setIsAlreadyApplied(hasApplied);
-    }
+    if (!intern || userApplication.length === 0) return; // ✅ Prevents null errors
+
+    const hasApplied = userApplication.some(item => item?.internId?._id === intern?._id);
+    setIsAlreadyApplied(hasApplied);
   };
 
   // ✅ Fetch Intern Details when ID Changes
@@ -91,7 +88,7 @@ const ApplyIntern = () => {
 
   // ✅ Check Application Status when User Data Updates
   useEffect(() => {
-    if (userApplication.length > 0 && intern) {
+    if (intern && userApplication.length > 0) {
       checkAlreadyApplied();
     }
   }, [intern, userApplication]);
@@ -105,27 +102,27 @@ const ApplyIntern = () => {
             <div className="flex flex-col md:flex-row items-center">
               <img
                 className="h-24 bg-white rounded-lg p-4 mr-4 max-md:mb-4 border"
-                src={intern.companyId.image}
-                alt={`${intern.companyId.name} logo`}
+                src={intern?.companyId?.image}
+                alt={`${intern?.companyId?.name} logo`}
               />
               <div className="text-center md:text-left text-neutral-900">
-                <h1 className="text-2xl sm:text-4xl font-medium">{intern.title}</h1>
+                <h1 className="text-2xl sm:text-4xl font-medium">{intern?.title}</h1>
                 <div className="flex flex-row flex-wrap max-md:justify-center gap-y-2 gap-6 items-center text-gray-600 mt-2">
                   <span className="flex items-center gap-1">
                     <img src={assets.suitcase_icon} alt="Suitcase icon" />
-                    <p>{intern.companyId.name}</p>
+                    <p>{intern?.companyId?.name}</p>
                   </span>
                   <span className="flex items-center gap-1">
                     <img src={assets.location_icon} alt="Location icon" />
-                    <p>{intern.location}</p>
+                    <p>{intern?.location}</p>
                   </span>
                   <span className="flex items-center gap-1">
                     <img src={assets.person_icon} alt="Person icon" />
-                    <p>{intern.level}</p>
+                    <p>{intern?.level}</p>
                   </span>
                   <span className="flex items-center gap-1">
                     <img src={assets.money_icon} alt="Money icon" />
-                    <p>Rs: {kconvert.convertTo(intern.salary)}</p>
+                    <p>Rs: {kconvert.convertTo(intern?.salary)}</p>
                   </span>
                 </div>
               </div>
@@ -134,33 +131,26 @@ const ApplyIntern = () => {
               <button onClick={applyHandlers} className="bg-green-600 p-2.5 px-10 text-white rounded">
                 {isAlreadyApplied ? 'Already Applied' : 'Apply Now'}
               </button>
-              <p className="mt-2 text-gray-600">Posted {moment(intern.date).fromNow()}</p>
+              <p className="mt-2 text-gray-600">Posted {moment(intern?.date).fromNow()}</p>
             </div>
           </div>
           <div className="flex flex-col lg:flex-row justify-between items-start">
             <div className="w-full lg:w-2/3">
               <h2 className="font-bold text-2xl mb-4">Intern Description</h2>
-              <div
-                className="rich-text"
-                dangerouslySetInnerHTML={{ __html: intern.description }}
-              ></div>
+              <div className="rich-text" dangerouslySetInnerHTML={{ __html: intern?.description }}></div>
               <button onClick={applyHandlers} className="bg-green-600 p-2.5 px-10 text-white rounded mt-10">
                 {isAlreadyApplied ? 'Already Applied' : 'Apply Now'}
               </button>
             </div>
             <div className="w-full lg:w-1/3 mt-8 lg:mt-0 lg:ml-8 space-y-5">
-              <h1 className='text-xl font-medium'>More Internships from {intern.companyId.name}</h1>
+              <h1 className='text-xl font-medium'>More Internships from {intern?.companyId?.name}</h1>
               {interns
-  .filter(job => job._id !== intern._id && job.companyId._id === intern.companyId._id) 
-  .filter(job => {
-    const appliedInternsId = new Set(userApplication.map(app => app.internId && app.internId._id));
-    return !appliedInternsId.has(job._id); 
-  })
-  .slice(0, 2)
-  .map((job, index) => (
-    <InternCard key={index} intern={job} /> 
-  ))}
-
+                .filter(job => job?._id !== intern?._id && job?.companyId?._id === intern?.companyId?._id)
+                .filter(job => !userApplication.some(app => app?.internId?._id === job?._id))
+                .slice(0, 2)
+                .map((job, index) => (
+                  <InternCard key={index} intern={job} />
+                ))}
             </div>
           </div>
         </div>
