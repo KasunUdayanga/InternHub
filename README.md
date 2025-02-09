@@ -17,14 +17,14 @@ Intern Hub is a web-based platform designed to connect students with internship 
 - **Authentication**: JWT,Clerk
 - **Hosting**: Vercel
 
+
+Intern Hub is a web-based platform designed to connect students with internship opportunities, making the process easier for both applicants and recruiters.
+
+🚀 **Live Demo**: [Intern Hub](https://intern-hub-client.vercel.app/)  
+📂 **GitHub Repository**: [Intern Hub on GitHub](https://github.com/KasunUdayanga/InternHub) 
+
 Clone the repository:
    ```sh
    git clone https://github.com/your-username/intern-hub.git
    cd intern-hub
-
-  Intern Hub is a web-based platform designed to connect students with internship opportunities, making the process easier for both applicants and recruiters.
-
-🚀 **Live Demo**: [Intern Hub](https://intern-hub-client.vercel.app/)  
-📂 **GitHub Repository**: [Intern Hub on GitHub](https://github.com/KasunUdayanga/InternHub)  
-
----
+ 
