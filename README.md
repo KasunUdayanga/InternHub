@@ -17,6 +17,12 @@ Intern Hub is a web-based platform designed to connect students with internship 
 - **Authentication**: JWT,Clerk
 - **Hosting**: Vercel
 
+### Frontend
+
+The frontend is built with React.js+vite and provides a seamless user experience.
+
+![Frontend Interface](TechHeaven/assets/Screenshot2024-05-30212558.png)
+
 
 Intern Hub is a web-based platform designed to connect students with internship opportunities, making the process easier for both applicants and recruiters.
 
