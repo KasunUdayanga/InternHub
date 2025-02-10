@@ -2,6 +2,7 @@
 
 Intern Hub is a web-based platform designed to connect students with internship opportunities, making the process easier for both applicants and recruiters.
 
+
 ## Features
 - 🔍 **Internship Listings**: Browse and apply for various internships.
 - 👤 **User Authentication**: Secure login and registration for students and recruiters.
