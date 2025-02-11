@@ -28,7 +28,7 @@ The frontend is built with React.js+vite and provides a seamless user experience
 Intern Hub is a web-based platform designed to connect students with internship opportunities, making the process easier for both applicants and recruiters.
 
 🚀 **Live Demo**: [Intern Hub](https://intern-hub-client.vercel.app/)  
-📂 **GitHub Repository**: [Intern Hub on GitHub](https://github.com/KasunUdayanga/InternHub) 
+
 
 Clone the repository:
    ```sh
